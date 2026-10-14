@@ -1,0 +1,116 @@
+:root {
+    --warm-primary: #e8835a;
+    --warm-primary-dark: #d66f47;
+    --warm-bg: #fff8f3;
+    --warm-card: #fff;
+    --warm-text: #2d2723;
+    --warm-muted: #7d6f67;
+    --warm-shadow: 0 16px 44px rgba(120, 78, 47, .09)
+}
+
+* {
+    box-sizing: border-box
+}
+
+body {
+    margin: 0;
+    color: var(--warm-text);
+    background: var(--warm-bg);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Microsoft YaHei", sans-serif;
+    line-height: 1.7
+}
+
+a {
+    text-decoration: none;
+    color: inherit
+}
+
+img {
+    display: block
+}
+
+.page {
+    width: min(1510px, calc(100% - 96px));
+    margin: 0 auto;
+    padding: 70px 0 90px
+}
+
+.soft-card {
+    background: #fff;
+    border-radius: 18px;
+    box-shadow: var(--warm-shadow);
+    border: 1px solid rgba(232, 131, 90, .08)
+}
+
+.warm-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    color: #fff;
+    background: var(--warm-primary);
+    border-radius: 13px;
+    padding: 14px 24px;
+    cursor: pointer;
+    transition: .25s ease;
+    font-weight: 700
+}
+
+.warm-btn:hover {
+    transform: translateY(-2px);
+    background: var(--warm-primary-dark);
+    box-shadow: 0 14px 24px rgba(232, 131, 90, .28)
+}
+
+.warm-btn:active {
+    transform: scale(.96)
+}
+
+.page-slide-enter-active,
+.page-slide-leave-active {
+    transition: opacity .28s ease, transform .28s ease
+}
+
+.page-slide-enter-from,.page-slide-leave-to {
+    opacity: 0;
+    transform: translateY(12px)
+}
+
+.el-button--primary {
+    --el-button-bg-color: var(--warm-primary);
+    --el-button-border-color: var(--warm-primary);
+    --el-button-hover-bg-color: var(--warm-primary-dark);
+    --el-button-hover-border-color: var(--warm-primary-dark)
+}
+
+::-webkit-scrollbar {
+    width: 6px
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgba(232, 131, 90, .75);
+    border-radius: 6px
+}
+
+.float-icon {
+    animation: icon-breathe 3.2s ease-in-out infinite
+}
+
+@keyframes icon-breathe {
+
+    0%,
+    100% {
+        transform: translateY(0)
+    }
+
+    50% {
+        transform: translateY(-2px)
+    }
+}
+
+@media(max-width:900px) {
+    .page {
+        width: min(100% - 28px, 1510px);
+        padding: 36px 0 64px
+    }
+}

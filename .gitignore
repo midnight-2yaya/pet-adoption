@@ -1,0 +1,49 @@
+# ============ Java / Maven ============
+target/
+*.class
+*.jar
+*.war
+*.log
+.mvn/
+mvnw
+mvnw.cmd
+
+# ============ IDEA ============
+.idea/
+*.iml
+*.iws
+*.ipr
+out/
+
+# ============ Eclipse / VSCode ============
+.settings/
+.classpath
+.project
+.vscode/
+
+# ============ Node / Vite ============
+node_modules/
+dist/
+.vite/
+*.local
+npm-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# ============ 环境变量 & 敏感信息 ============
+.env
+.env.local
+.env.*.local
+application-local.yml
+application-prod.yml
+
+# ============ 系统文件 ============
+.DS_Store
+Thumbs.db
+
+# ============ 上传目录 ============
+uploads/
+
+# ============ 日志 ============
+logs/
+*.log
